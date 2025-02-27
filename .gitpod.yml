@@ -1,0 +1,11 @@
+image: maven:3.8.5-openjdk-11
+
+tasks:
+  - name: Install Dependencies
+    command: mvn clean install
+  - name: Run Tests
+    command: mvn test
+
+ports:
+  - port: 4444
+    onOpen: ignore
